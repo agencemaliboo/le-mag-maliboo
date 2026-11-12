@@ -228,8 +228,14 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .filtres button{font-weight:700;font-size:15.5px;padding:9px 16px;border-radius:999px;background:var(--fond-2);transition:background .2s,color .2s}
 .filtres button[aria-pressed="true"]{background:var(--violet);color:#fff}
 .page-tete{margin:38px 0 6px}
-.accueil{margin:22px 0 0;max-width:62em;font:400 17px/1.55 var(--texte);color:var(--mu);text-wrap:pretty}
-.accueil strong{color:var(--encre);font-weight:700}
+.accueil{margin:22px 0 0;display:flex;align-items:center;gap:22px;padding:20px clamp(18px,3vw,30px);border-radius:28px;background:var(--fond-2);border:1px solid var(--ligne)}
+.accueil .pastille{flex:0 0 auto;width:68px;height:68px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px var(--vert)}
+.accueil .pastille svg{width:46px;height:46px}
+.accueil .pastille .anneau{fill:#1E0F30}.accueil .pastille .manche{stroke:#1E0F30}.accueil .pastille .verre{fill:#fff}.accueil .pastille .lentille{fill:#76E02F}
+.accueil h2{margin:0 0 4px;font:800 clamp(20px,2.2vw,25px)/1.2 var(--titre);letter-spacing:-.02em;color:var(--encre);text-wrap:balance}
+.accueil h2 mark{background:linear-gradient(transparent 58%,var(--vert) 58%);color:inherit;padding:0 .08em}
+.accueil p{margin:0;font:400 17px/1.55 var(--texte);color:var(--mu);max-width:62em;text-wrap:pretty}
+@media (max-width:600px){.accueil{align-items:flex-start;gap:14px;padding:18px}.accueil .pastille{width:50px;height:50px;box-shadow:0 0 0 3px var(--vert)}.accueil .pastille svg{width:34px;height:34px}}
 .page-tete h1{font:800 clamp(36px,5vw,64px)/1.04 var(--titre);letter-spacing:-.03em}
 .page-tete p{color:var(--mu);font-size:19px;margin-top:10px;max-width:38em}
 .vide{color:var(--mu);padding:20px 0}

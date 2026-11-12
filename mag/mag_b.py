@@ -55,8 +55,14 @@ CSS_PLUS = r'''
 .filtres button{font-weight:700;font-size:15.5px;padding:9px 16px;border-radius:999px;background:var(--fond-2);transition:background .2s,color .2s}
 .filtres button[aria-pressed="true"]{background:var(--violet);color:#fff}
 .page-tete{margin:38px 0 6px}
-.accueil{margin:22px 0 0;max-width:62em;font:400 17px/1.55 var(--texte);color:var(--mu);text-wrap:pretty}
-.accueil strong{color:var(--encre);font-weight:700}
+.accueil{margin:22px 0 0;display:flex;align-items:center;gap:22px;padding:20px clamp(18px,3vw,30px);border-radius:28px;background:var(--fond-2);border:1px solid var(--ligne)}
+.accueil .pastille{flex:0 0 auto;width:68px;height:68px;border-radius:50%;background:#fff;display:grid;place-items:center;box-shadow:0 0 0 4px var(--vert)}
+.accueil .pastille svg{width:46px;height:46px}
+.accueil .pastille .anneau{fill:#1E0F30}.accueil .pastille .manche{stroke:#1E0F30}.accueil .pastille .verre{fill:#fff}.accueil .pastille .lentille{fill:#76E02F}
+.accueil h2{margin:0 0 4px;font:800 clamp(20px,2.2vw,25px)/1.2 var(--titre);letter-spacing:-.02em;color:var(--encre);text-wrap:balance}
+.accueil h2 mark{background:linear-gradient(transparent 58%,var(--vert) 58%);color:inherit;padding:0 .08em}
+.accueil p{margin:0;font:400 17px/1.55 var(--texte);color:var(--mu);max-width:62em;text-wrap:pretty}
+@media (max-width:600px){.accueil{align-items:flex-start;gap:14px;padding:18px}.accueil .pastille{width:50px;height:50px;box-shadow:0 0 0 3px var(--vert)}.accueil .pastille svg{width:34px;height:34px}}
 .page-tete h1{font:800 clamp(36px,5vw,64px)/1.04 var(--titre);letter-spacing:-.03em}
 .page-tete p{color:var(--mu);font-size:19px;margin-top:10px;max-width:38em}
 .vide{color:var(--mu);padding:20px 0}
@@ -297,7 +303,7 @@ def construire():
     une, reste = arts[0], arts[1:]
     items = "".join(f"<span>{T(c)}</span>" for c in conseils)
     h = [barre(r, "une"), '<main id="contenu"><div class="w">',
-         '<p class="accueil"><strong>Bienvenue sur Le Mag, le magazine de l’agence Maliboo.</strong> Chaque lundi et chaque jeudi, un article court et un conseil à appliquer tout de suite pour être mieux trouvé sur Google, sur Google Maps et dans les IA, et pour obtenir plus d’avis clients.</p>',
+         f'<section class="accueil" aria-label="Présentation du magazine"><span class="pastille">{boo_logo()}</span><div><h2>Bienvenue sur <mark>Le Mag</mark>, le magazine de l’agence Maliboo</h2><p>Chaque lundi et chaque jeudi, un article court et un conseil à appliquer tout de suite pour être mieux trouvé sur Google, sur Google Maps et dans les IA, et pour obtenir plus d’avis clients.</p></div></section>',
          f'<section class="couv"><i class="bulle b1"></i><i class="bulle b2"></i><i class="bulle b3"></i><div><a class="puce" href="{lien("articles/", r)}">{RUB[une["rubrique"]]}</a>'
          f'<h1><a href="{lien(une["url"], r)}">{T(une["titre"])}</a></h1><p class="chapeau">{T(une["chapeau"])}</p>'
          f'<div class="actions"><a class="bouton" href="{lien(une["url"], r)}">Lire l\'article<i aria-hidden="true"></i></a><span class="temps">{P.minutes(une)} minutes de lecture, {B.date_fr(une["date"])}</span></div></div>{vignette(une)}</section>',
