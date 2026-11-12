@@ -55,6 +55,8 @@ CSS_PLUS = r'''
 .filtres button{font-weight:700;font-size:15.5px;padding:9px 16px;border-radius:999px;background:var(--fond-2);transition:background .2s,color .2s}
 .filtres button[aria-pressed="true"]{background:var(--violet);color:#fff}
 .page-tete{margin:38px 0 6px}
+.accueil{margin:22px 0 0;max-width:62em;font:400 17px/1.55 var(--texte);color:var(--mu);text-wrap:pretty}
+.accueil strong{color:var(--encre);font-weight:700}
 .page-tete h1{font:800 clamp(36px,5vw,64px)/1.04 var(--titre);letter-spacing:-.03em}
 .page-tete p{color:var(--mu);font-size:19px;margin-top:10px;max-width:38em}
 .vide{color:var(--mu);padding:20px 0}
@@ -295,6 +297,7 @@ def construire():
     une, reste = arts[0], arts[1:]
     items = "".join(f"<span>{T(c)}</span>" for c in conseils)
     h = [barre(r, "une"), '<main id="contenu"><div class="w">',
+         '<p class="accueil"><strong>Bienvenue sur Le Mag, le magazine de l’agence Maliboo.</strong> Chaque lundi et chaque jeudi, un article court et un conseil à appliquer tout de suite pour être mieux trouvé sur Google, sur Google Maps et dans les IA, et pour obtenir plus d’avis clients.</p>',
          f'<section class="couv"><i class="bulle b1"></i><i class="bulle b2"></i><i class="bulle b3"></i><div><a class="puce" href="{lien("articles/", r)}">{RUB[une["rubrique"]]}</a>'
          f'<h1><a href="{lien(une["url"], r)}">{T(une["titre"])}</a></h1><p class="chapeau">{T(une["chapeau"])}</p>'
          f'<div class="actions"><a class="bouton" href="{lien(une["url"], r)}">Lire l\'article<i aria-hidden="true"></i></a><span class="temps">{P.minutes(une)} minutes de lecture, {B.date_fr(une["date"])}</span></div></div>{vignette(une)}</section>',
