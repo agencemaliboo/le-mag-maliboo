@@ -409,6 +409,18 @@ def construire():
          "## Pages", "", f"- [Avis Maliboo]({DOM}/avis-maliboo/) : la note de l'agence sur Google et les avis de ses clients, publiés sans retouche.", f"- [Tous les articles]({DOM}/articles/)", "", "## Articles", ""]
     L += [f"- [{a['titre']}]({DOM}/{a['url']}) ({B.date_fr(a['date'], False)}) : {a['description']} Conseil : {a['conseil']['titre']}." for a in arts]
     open(os.path.join(OUT, "llms.txt"), "w", encoding="utf-8").write("\n".join(L) + "\n")
+    # illustration autonome de chaque article + dernier article pour le site maliboo-referencement.fr
+    ST = ('<style>.enc{fill:#1E0F30}.ver{fill:#7A2BC2}.boo{fill:#76E02F}.pap{fill:#fff}.tr{fill:#1E0F30}'
+          '.s-enc{stroke:#1E0F30;fill:none}.s-ver{stroke:#7A2BC2;fill:none}</style>')
+    for a in arts:
+        svg = B.dessin(a["rubrique"], a["titre"]).replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
+        svg = svg.replace(">", ">" + ST, 1)
+        open(os.path.join(OUT, a["slug"], "illustration.svg"), "w", encoding="utf-8").write(svg)
+    d = arts[0]
+    json.dump({"titre": d["titre"], "chapeau": d["chapeau"], "rubrique": RUB[d["rubrique"]], "date": d["date"],
+               "date_fr": B.date_fr(d["date"]), "minutes": P.minutes(d), "url": f"{DOM}/{d['url']}",
+               "image": f"{DOM}/{d['slug']}/illustration.svg", "conseil": d["conseil"]["titre"]},
+              open(os.path.join(OUT, "dernier.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=1)
     return tailles
 
 
