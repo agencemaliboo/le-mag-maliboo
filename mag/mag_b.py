@@ -416,6 +416,8 @@ def construire():
         svg = B.dessin(a["rubrique"], a["titre"]).replace("<svg ", '<svg xmlns="http://www.w3.org/2000/svg" ', 1)
         svg = svg.replace(">", ">" + ST, 1)
         open(os.path.join(OUT, a["slug"], "illustration.svg"), "w", encoding="utf-8").write(svg)
+    # validation Search Console (ne pas supprimer)
+    open(os.path.join(OUT, "googlee873fbb158abe819.html"), "w").write("google-site-verification: googlee873fbb158abe819.html")
     d = arts[0]
     json.dump({"titre": d["titre"], "chapeau": d["chapeau"], "rubrique": RUB[d["rubrique"]], "date": d["date"],
                "date_fr": B.date_fr(d["date"]), "minutes": P.minutes(d), "url": f"{DOM}/{d['url']}",
