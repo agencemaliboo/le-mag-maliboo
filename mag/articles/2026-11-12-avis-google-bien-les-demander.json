@@ -1,0 +1,41 @@
+{
+  "slug": "avis-google-la-bonne-facon-de-les-demander",
+  "date": "2026-11-12",
+  "rubrique": "avis",
+  "titre": "Avis Google : la bonne façon de les demander, et trois erreurs à éviter",
+  "titre_seo": "Avis Google : comment en obtenir plus sans enfreindre les règles",
+  "description": "Quand demander un avis Google, avec quelle phrase, et les trois erreurs qui peuvent coûter cher : remise contre avis, tri des clients, avis négatif laissé sans réponse.",
+  "chapeau": "Les avis pèsent sur votre place dans Google Maps et sur la décision de vos clients. Encore faut-il les demander au bon moment, et sans franchir les lignes rouges de Google.",
+  "corps": [
+    {"p": "Deux commerces, même rue, même métier. L'un affiche quatre avis, l'autre cent vingt. Vous savez déjà chez lequel vous entrez. Vos clients font le même calcul, et Google aussi : dans son aide officielle, le moteur écrit que le nombre d'avis et la note d'un établissement entrent dans le classement des résultats locaux."},
+    {"h2": "Le bon moment, c'est tout de suite"},
+    {"p": "Un client satisfait l'est surtout le jour même. Le lendemain, il a autre chose en tête ; une semaine plus tard, il a oublié votre nom. Le bon moment pour demander un avis, c'est celui où le client vous dit merci."},
+    {"p": "Votre fiche Google fournit un lien direct, dans le menu « Demander des avis ». Envoyez-le par SMS dans l'heure qui suit, ou imprimez-le en QR code sur le comptoir, la facture ou la carte de visite. Chaque clic en moins, ce sont des avis en plus."},
+    {"h2": "Trois erreurs qui coûtent cher"},
+    {"liste": [
+      "Offrir une remise ou un cadeau contre un avis. Le règlement de Google l'interdit, et les avis concernés peuvent être supprimés.",
+      "Trier ses clients, en ne sollicitant que ceux dont on est sûr. Google interdit aussi cette pratique. Demandez à tout le monde.",
+      "Faire écrire des avis par ses proches ou les acheter. En France, un faux avis est une pratique commerciale trompeuse, sanctionnée par la loi."
+    ]},
+    {"h2": "Répondre, toujours"},
+    {"p": "Une réponse à un avis ne s'adresse pas seulement à son auteur. Elle est lue par tous ceux qui hésitent encore. Répondez à chaque avis, en deux lignes, avec le prénom du client et un détail de sa visite."},
+    {"p": "Devant un avis négatif, trois temps suffisent : remercier, reconnaître le problème sans se justifier longuement, proposer de poursuivre par téléphone. Un avis sévère suivi d'une réponse calme rassure souvent plus qu'une page de cinq étoiles sans un mot du commerçant."}
+  ],
+  "conseil": {
+    "titre": "La phrase qui marche",
+    "texte": "À dire au moment où le client vous remercie :",
+    "etapes": [
+      "« Si vous êtes content du résultat, un avis Google nous aiderait beaucoup. »",
+      "« Je vous envoie le lien par SMS, cela prend une minute. »",
+      "Envoyez le lien dans l'heure, pas le lendemain.",
+      "Répondez à l'avis dès qu'il est publié."
+    ]
+  },
+  "mot": {"terme": "Pack local", "definition": "Le bloc de trois établissements que Google affiche avec une carte, au-dessus des résultats classiques, pour une recherche de proximité comme « boulanger Nice ». Les avis aident à y entrer."},
+  "enbref": [
+    "Demandez l'avis le jour même, avec le lien direct.",
+    "Ni cadeau, ni tri des clients, ni faux avis.",
+    "Répondez à tous les avis, surtout aux négatifs."
+  ],
+  "annonce": {"titre": "Une fiche Google qui travaille pour vous", "texte": "Maliboo reprend, optimise et anime votre fiche Google chaque mois, avis compris.", "lien": "https://www.maliboo-referencement.fr/referencement-local-google-business-profile/", "bouton": "Voir l'offre"}
+}

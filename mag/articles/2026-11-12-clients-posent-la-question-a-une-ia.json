@@ -1,0 +1,43 @@
+{
+  "slug": "vos-clients-posent-la-question-a-une-ia",
+  "date": "2026-11-12",
+  "rubrique": "ia",
+  "ordre": 2,
+  "titre": "Vos clients posent la question à une IA. Êtes-vous dans la réponse ?",
+  "titre_seo": "Être cité par ChatGPT et Gemini : ce qu'une petite entreprise peut faire",
+  "description": "Les assistants IA répondent par un texte et citent deux ou trois noms. Comment ces réponses se fabriquent, et ce qu'une petite entreprise peut faire dès cette semaine pour y figurer.",
+  "chapeau": "Un assistant IA ne propose pas dix liens : il rédige une réponse et cite deux ou trois noms. Voici comment ces réponses se fabriquent, et ce qu'une petite entreprise peut faire dès cette semaine.",
+  "corps": [
+    {"p": "Pendant vingt ans, la règle du jeu a été simple : un client tape sa recherche, Google affiche dix liens, et le client compare. Être quatrième de la liste, c'était déjà exister. Cette règle est en train de changer."},
+    {"h2": "Une réponse, pas une liste"},
+    {"p": "Quand on demande à ChatGPT, à Gemini ou à Perplexity « quel couvreur me conseilles-tu à Antibes ? », l'assistant ne renvoie pas une page de résultats. Il écrit un paragraphe, cite deux ou trois entreprises, explique en une phrase pourquoi, et la conversation continue."},
+    {"p": "Pour l'entreprise citée, c'est une recommandation en bonne et due forme. Pour les autres, il n'y a pas de deuxième page où se rattraper : elles ne sont tout simplement pas dans la réponse."},
+    {"h2": "Où l'assistant va chercher ses noms"},
+    {"p": "Un assistant ne connaît pas votre ville. Il lit ce qui est publié : votre site, votre fiche Google, les annuaires, les avis, la presse locale, les forums. Puis il recoupe. Ce que nous observons en posant chaque mois les mêmes questions aux IA pour nos clients, c'est qu'elles citent plus volontiers une entreprise décrite de la même façon partout."},
+    {"p": "Même nom, même adresse, mêmes services, mêmes horaires, d'un site à l'autre. À l'inverse, une entreprise qui s'appelle « Dupont Toiture » sur sa fiche, « SARL Dupont et fils » dans un annuaire et « Dupont Couverture 06 » sur Facebook donne à l'assistant trois raisons d'hésiter."},
+    {"h2": "Ce qui se cite, et ce qui ne se cite pas"},
+    {"p": "Les assistants reprennent les phrases qui répondent à une question précise. « Nous intervenons à Antibes et dans un rayon de vingt kilomètres, sous 48 heures, devis gratuit » : voilà une phrase qu'une IA peut reprendre telle quelle. « Une équipe de passionnés à votre écoute » ne répond à aucune question, et personne ne la citera."},
+    {"liste": ["Vos tarifs, ou au moins une fourchette.", "Votre zone d'intervention, ville par ville.", "Vos délais et vos horaires.", "Ce que vous faites, et ce que vous ne faites pas."]},
+    {"p": "Une page de questions-réponses, rédigée avec les vraies questions de vos clients, est souvent le chantier le plus rentable. C'est aussi le plus rapide."},
+    {"h2": "Ce que cela ne remplace pas"},
+    {"p": "Le référencement sur Google reste la fondation : les assistants lisent en grande partie les mêmes pages que le moteur de recherche. Un site introuvable sur Google a peu de chances d'être cité par une IA."},
+    {"p": "Et il faut le dire franchement : personne ne peut garantir qu'une IA citera une entreprise. Les réponses changent d'un jour à l'autre et d'un assistant à l'autre. On peut en revanche mesurer, chaque mois, si l'on progresse."}
+  ],
+  "conseil": {
+    "titre": "Posez vous-même la question",
+    "texte": "Dix minutes suffisent pour savoir où vous en êtes.",
+    "etapes": [
+      "Ouvrez ChatGPT, Gemini et Perplexity.",
+      "Posez la question de votre client, avec votre ville : « Quel plombier me conseilles-tu à Antibes pour une fuite ? »",
+      "Notez qui est cité, et quels sites servent de sources.",
+      "Refaites le test dans un mois, avec la même question."
+    ]
+  },
+  "mot": {"terme": "GEO", "definition": "Initiales de « Generative Engine Optimization ». C'est le travail qui consiste à rendre une entreprise visible dans les réponses des assistants IA, comme le référencement naturel la rend visible dans Google."},
+  "enbref": [
+    "Un assistant IA cite deux ou trois noms, pas dix.",
+    "Il recoupe ce qui est publié sur vous : la cohérence compte.",
+    "Les phrases précises se citent, les slogans non."
+  ],
+  "annonce": {"titre": "Que dit ChatGPT de vous ?", "texte": "Maliboo pose les questions de vos clients aux IA et vous montre qui elles recommandent. Gratuit, sous 48 heures.", "lien": "https://www.maliboo-referencement.fr/agence-geo-referencement-ia/", "bouton": "Demander le test"}
+}
