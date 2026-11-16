@@ -250,8 +250,8 @@ def corps_html(a):
     return "".join(o)
 
 
-def photo_html(a, b):
-    """Bloc photo : le fichier est dans photos/<slug>/ ; il est copié à côté de la page de l'article."""
+def photo_html(a, b, classe="photo"):
+    """Photo : le fichier est dans photos/<slug>/ ; il est copié à côté de la page de l'article."""
     taille = ""
     try:
         from PIL import Image
@@ -268,7 +268,8 @@ def photo_html(a, b):
     else:
         lic = e(lic)
     leg = f"{T(b['legende'])} " if b.get("legende") else ""
-    return (f'<figure class="photo"><img src="{e(b["photo"])}" alt="{e(b["alt"])}"{taille} loading="lazy" decoding="async">'
+    charge = ' fetchpriority="high"' if classe != "photo" else ' loading="lazy" decoding="async"'
+    return (f'<figure class="{classe}"><img src="{e(b["photo"])}" alt="{e(b["alt"])}"{taille}{charge}>'
             f'<figcaption>{leg}<span class="credit">Photo\u00a0: {credit}{", " + lic if lic else ""}</span></figcaption></figure>')
 
 

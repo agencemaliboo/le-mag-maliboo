@@ -20,11 +20,17 @@ AVIS = B.AVIS + [("Ted", "Webcamo.com", "Nous avons confié le référencement d
 
 CSS_PLUS = r'''
 [hidden]{display:none!important}
-/* ---------- photos dans les articles ---------- */
-.texte figure.photo{margin:1.6em 0 0}
-.texte figure.photo img{width:100%;height:auto;border-radius:24px;background:var(--fond-2)}
-.texte figure.photo figcaption{margin-top:8px;font-size:15px;line-height:1.45;color:var(--mu)}
-.texte figure.photo .credit{font-size:13px;white-space:normal}
+/* ---------- photos : en couverture, dans un cadre blanc (comme les dessins) ---------- */
+.art-couv .cadre-photo{max-width:580px;margin:0;padding:14px 14px 12px;transform:rotate(-1.2deg)}
+.art-couv .cadre-photo img{width:100%;height:auto;border-radius:16px;background:#F6F0FB}
+.cadre-photo figcaption{margin-top:10px;padding:0 4px;font-size:15px;line-height:1.45;color:#1E0F30;text-align:left}
+.cadre-photo .credit{display:block;margin-top:2px;font-size:12.5px;color:#5E4B73}
+.cadre-photo .credit a{color:inherit}
+/* photo dans le texte (cas rare) : même cadre, pas d'image nue */
+.texte figure.photo{margin:1.6em 0 0;padding:12px;background:var(--fond-2);border:1.5px solid var(--ligne);border-radius:24px}
+.texte figure.photo img{width:100%;height:auto;border-radius:14px}
+.texte figure.photo figcaption{margin-top:8px;padding:0 4px;font-size:15px;line-height:1.45;color:var(--mu)}
+.texte figure.photo .credit{display:block;font-size:12.5px}
 .texte figure.photo .credit a{color:inherit}
 .evite{position:absolute;left:-999px;top:8px;background:#1E0F30;color:#fff;padding:8px 14px;z-index:99;border-radius:8px}
 .evite:focus{left:8px}
@@ -330,7 +336,7 @@ def construire():
         c = [barre(r), '<main id="contenu"><div class="w"><article>',
              f'<header class="art-tete"><a class="puce" href="{lien("articles/", r)}">{RUB[a["rubrique"]]}</a><h1>{T(a["titre"])}</h1><p class="chapeau">{T(a["chapeau"])}</p>'
              f'<p class="meta"><time datetime="{a["date"]}">{B.date_fr(a["date"]).capitalize()}</time>, par la rédaction Maliboo. {P.minutes(a)} minutes de lecture.</p></header>',
-             f'<div class="art-couv"><i class="bulle b1"></i><i class="bulle b2"></i>{vignette(a)}</div>',
+             f'<div class="art-couv"><i class="bulle b1"></i><i class="bulle b2"></i>{B.photo_html(a, a["photo"], "vignette cadre-photo") if a.get("photo") else vignette(a)}</div>',
              f'<div class="texte">{corps}</div><div class="bref"><h3>En bref</h3><ul>{"".join(f"<li>{T(x)}</li>" for x in a["enbref"])}</ul></div>',
              f'</article><div class="apres"><div class="bento">{P.c_conseil(a)}{P.c_mot(a)}{c_art(autre, r) if autre else ""}{P.c_annonce(a["annonce"])}</div></div>', "</div></main>", pied(r)]
         ld = {"@context": "https://schema.org", "@graph": [org, {"@type": "Article", "headline": a["titre"], "description": a["description"], "datePublished": a["date"], "dateModified": a.get("maj", a["date"]),

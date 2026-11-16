@@ -25,7 +25,9 @@ Construire le site : `cd mag && python3 mag_b.py prod` (réécrit `docs/`). Aper
 - Uniquement des photos sous licence libre (CC0, domaine public, CC BY, CC BY-SA, Unsplash, Pexels), trouvées par exemple avec l'API Openverse (`https://api.openverse.org/v1/images/?q=...&license=cc0,pdm,by,by-sa`). Noter l'auteur, la licence et la page source.
 - Aucun visage reconnaissable, aucune marque ou enseigne lisible, rien de daté (Covid, etc.). Photo regardée avant publication.
 - Fichier : `mag/photos/<slug>/<nom>.jpg`, 960 à 1200 px de large, moins de 250 Ko. Le générateur le copie à côté de la page de l'article.
-- Bloc à placer dans `corps` : `{"photo": "nom.jpg", "alt": "description précise", "legende": "une phrase", "credit": "Auteur, Banque", "source": "url de la page source", "licence": "CC BY-SA 4.0", "licence_url": "url de la licence"}`. `licence` et `licence_url` peuvent être omis pour une photo sans licence à citer (Unsplash, Pexels, CC0).
+- La photo sert de couverture : elle remplace le dessin en haut de l'article, dans le cadre blanc sur fond violet, avec légende et crédit dans le cadre. Laurent ne veut pas de photo nue posée entre deux paragraphes : ne pas mettre de bloc photo dans `corps`.
+- Champ à placer au premier niveau de l'article (à côté de `chapeau`) : `"photo": {"photo": "nom.jpg", "alt": "description précise", "legende": "une phrase", "credit": "Auteur, Banque", "source": "url de la page source", "licence": "CC BY-SA 4.0", "licence_url": "url de la licence"}`. `licence` et `licence_url` peuvent être omis pour une photo sans licence à citer (Unsplash, Pexels, CC0).
+- Format paysage de préférence (4:3 ou 3:2).
 
 ## Règles de rédaction
 
