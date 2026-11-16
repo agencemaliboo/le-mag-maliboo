@@ -123,10 +123,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .art-couv .b2{width:120px;height:120px;left:-40px;bottom:-40px;background:var(--jaune);animation-delay:-4s}
 .texte{max-width:700px;margin:38px auto 0;font-size:19.5px;line-height:1.7}
 .texte>p{margin-top:1em}
-.texte>p:first-child{font-size:1.12em;font-weight:500}
 .texte h2{font:800 clamp(26px,2.8vw,34px)/1.12 var(--titre);letter-spacing:-.02em;margin-top:1.7em;text-wrap:balance}
 .texte ul.pts{margin-top:1em;display:grid;gap:10px}
-.texte ul.pts li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:14px 16px;border-radius:16px;background:var(--fond-2);font-size:18px;line-height:1.45}
+.texte ul.pts li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:14px 16px;border-radius:16px;background:var(--fond-2);font-size:inherit;line-height:1.5}
 .texte ul.pts li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--vert);margin-top:2px;box-shadow:inset 0 0 0 6px var(--fond-2),inset 0 0 0 22px #2F7D0C}
 .bref{max-width:700px;margin:34px auto 0;border-radius:24px;border:2px solid var(--violet);padding:22px 24px}
 .bref h3{font:800 24px/1 var(--titre);margin-bottom:10px;color:var(--violet)}
@@ -193,6 +192,11 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 @media (prefers-reduced-motion:reduce){.couv .bulle,.art-couv .bulle,.defile .bande,.oeil{animation:none}.carte,.vignette,.bouton,.cta{transition:none}.js .carte.attend{opacity:1;transform:none}html{scroll-behavior:auto}}
 
 [hidden]{display:none!important}
+/* ---------- texte de l'article posé sur une feuille, alignée sur la couverture ---------- */
+.feuille{max-width:1000px;margin:26px auto 0;background:var(--carte);border:1.5px solid var(--ligne);border-radius:36px;padding:clamp(24px,5vw,60px) clamp(18px,5vw,60px);box-shadow:0 18px 50px rgba(60,20,110,.08)}
+.feuille .texte{margin-top:0}
+.feuille .texte ul.pts li{background:var(--fond-2)}
+@media (max-width:600px){.feuille{border-radius:26px;margin-top:18px}}
 /* ---------- photos : en couverture, dans un cadre blanc (comme les dessins) ---------- */
 .art-couv .cadre-photo{max-width:580px;margin:0;padding:14px 14px 12px;transform:rotate(-1.2deg)}
 .art-couv .cadre-photo img{width:100%;height:auto;border-radius:16px;background:#F6F0FB}

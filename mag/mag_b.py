@@ -20,6 +20,11 @@ AVIS = B.AVIS + [("Ted", "Webcamo.com", "Nous avons confié le référencement d
 
 CSS_PLUS = r'''
 [hidden]{display:none!important}
+/* ---------- texte de l'article posé sur une feuille, alignée sur la couverture ---------- */
+.feuille{max-width:1000px;margin:26px auto 0;background:var(--carte);border:1.5px solid var(--ligne);border-radius:36px;padding:clamp(24px,5vw,60px) clamp(18px,5vw,60px);box-shadow:0 18px 50px rgba(60,20,110,.08)}
+.feuille .texte{margin-top:0}
+.feuille .texte ul.pts li{background:var(--fond-2)}
+@media (max-width:600px){.feuille{border-radius:26px;margin-top:18px}}
 /* ---------- photos : en couverture, dans un cadre blanc (comme les dessins) ---------- */
 .art-couv .cadre-photo{max-width:580px;margin:0;padding:14px 14px 12px;transform:rotate(-1.2deg)}
 .art-couv .cadre-photo img{width:100%;height:auto;border-radius:16px;background:#F6F0FB}
@@ -337,7 +342,7 @@ def construire():
              f'<header class="art-tete"><a class="puce" href="{lien("articles/", r)}">{RUB[a["rubrique"]]}</a><h1>{T(a["titre"])}</h1><p class="chapeau">{T(a["chapeau"])}</p>'
              f'<p class="meta"><time datetime="{a["date"]}">{B.date_fr(a["date"]).capitalize()}</time>, par la rédaction Maliboo. {P.minutes(a)} minutes de lecture.</p></header>',
              f'<div class="art-couv"><i class="bulle b1"></i><i class="bulle b2"></i>{B.photo_html(a, a["photo"], "vignette cadre-photo") if a.get("photo") else vignette(a)}</div>',
-             f'<div class="texte">{corps}</div><div class="bref"><h3>En bref</h3><ul>{"".join(f"<li>{T(x)}</li>" for x in a["enbref"])}</ul></div>',
+             f'<div class="feuille"><div class="texte">{corps}</div><div class="bref"><h3>En bref</h3><ul>{"".join(f"<li>{T(x)}</li>" for x in a["enbref"])}</ul></div></div>',
              f'</article><div class="apres"><div class="bento">{P.c_conseil(a)}{P.c_mot(a)}{c_art(autre, r) if autre else ""}{P.c_annonce(a["annonce"])}</div></div>', "</div></main>", pied(r)]
         ld = {"@context": "https://schema.org", "@graph": [org, {"@type": "Article", "headline": a["titre"], "description": a["description"], "datePublished": a["date"], "dateModified": a.get("maj", a["date"]),
               "inLanguage": "fr", "articleSection": RUB[a["rubrique"]], "mainEntityOfPage": DOM + "/" + a["url"], "author": {"@id": DOM + "/#maliboo"}, "publisher": {"@id": DOM + "/#maliboo"}},

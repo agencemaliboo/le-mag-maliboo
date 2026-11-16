@@ -259,14 +259,11 @@ def photo_html(a, b, classe="photo"):
             taille = f' width="{im.width}" height="{im.height}"'
     except Exception:
         pass
+    # crédit en texte simple, sans lien externe (choix de Laurent) ; la licence est citée avec son adresse en clair
     credit = e(b["credit"])
-    if b.get("source"):
-        credit = f'<a href="{e(b["source"])}" rel="nofollow noopener">{credit}</a>'
-    lic = b.get("licence", "")
+    lic = e(b.get("licence", ""))
     if lic and b.get("licence_url"):
-        lic = f'<a href="{e(b["licence_url"])}" rel="license nofollow noopener">{e(lic)}</a>'
-    else:
-        lic = e(lic)
+        lic += " (" + e(re.sub(r"^https?://(www\.)?|/deed\.\w+$|/$", "", b["licence_url"])) + ")"
     leg = f"{T(b['legende'])} " if b.get("legende") else ""
     charge = ' fetchpriority="high"' if classe != "photo" else ' loading="lazy" decoding="async"'
     return (f'<figure class="{classe}"><img src="{e(b["photo"])}" alt="{e(b["alt"])}"{taille}{charge}>'

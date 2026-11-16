@@ -135,10 +135,9 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 .art-couv .b2{width:120px;height:120px;left:-40px;bottom:-40px;background:var(--jaune);animation-delay:-4s}
 .texte{max-width:700px;margin:38px auto 0;font-size:19.5px;line-height:1.7}
 .texte>p{margin-top:1em}
-.texte>p:first-child{font-size:1.12em;font-weight:500}
 .texte h2{font:800 clamp(26px,2.8vw,34px)/1.12 var(--titre);letter-spacing:-.02em;margin-top:1.7em;text-wrap:balance}
 .texte ul.pts{margin-top:1em;display:grid;gap:10px}
-.texte ul.pts li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:14px 16px;border-radius:16px;background:var(--fond-2);font-size:18px;line-height:1.45}
+.texte ul.pts li{display:grid;grid-template-columns:26px 1fr;gap:10px;padding:14px 16px;border-radius:16px;background:var(--fond-2);font-size:inherit;line-height:1.5}
 .texte ul.pts li::before{content:"";width:22px;height:22px;border-radius:50%;background:var(--vert);margin-top:2px;box-shadow:inset 0 0 0 6px var(--fond-2),inset 0 0 0 22px #2F7D0C}
 .bref{max-width:700px;margin:34px auto 0;border-radius:24px;border:2px solid var(--violet);padding:22px 24px}
 .bref h3{font:800 24px/1 var(--titre);margin-bottom:10px;color:var(--violet)}
