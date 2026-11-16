@@ -28,6 +28,7 @@ Construire le site : `cd mag && python3 mag_b.py prod` (réécrit `docs/`). Aper
 - La photo sert de couverture : elle remplace le dessin en haut de l'article, dans le cadre blanc sur fond violet, avec légende et crédit dans le cadre. Laurent ne veut pas de photo nue posée entre deux paragraphes : ne pas mettre de bloc photo dans `corps`.
 - Champ à placer au premier niveau de l'article (à côté de `chapeau`) : `"photo": {"photo": "nom.jpg", "alt": "description précise", "legende": "une phrase", "credit": "Auteur, Banque", "source": "url de la page source", "licence": "CC BY-SA 4.0", "licence_url": "url de la licence"}`. `licence` et `licence_url` peuvent être omis pour une photo sans licence à citer (Unsplash, Pexels, CC0).
 - Format paysage de préférence (4:3 ou 3:2).
+- Crédits en texte simple, jamais de lien externe (choix de Laurent). Le générateur affiche l'adresse de la licence en clair, ce que demandent les licences CC BY et CC BY-SA. Préférer les photos CC0 ou domaine public quand c'est possible.
 
 ## Règles de rédaction
 
