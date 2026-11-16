@@ -19,6 +19,14 @@ Construire le site : `cd mag && python3 mag_b.py prod` (réécrit `docs/`). Aper
 5. Construire, vérifier que la nouvelle page existe dans `docs/` et que la une l'affiche, puis valider et pousser sur `main` avec un message de commit court en français.
 6. Donner à Laurent le lien de l'article : `https://www.referencement-maliboo.com/<slug>/`.
 
+## Photos (souhait de Laurent : « de temps en temps »)
+
+- Environ un article sur deux, seulement quand une photo aide vraiment (une vitrine, un comptoir, un écran de téléphone). Pas d'obligation.
+- Uniquement des photos sous licence libre (CC0, domaine public, CC BY, CC BY-SA, Unsplash, Pexels), trouvées par exemple avec l'API Openverse (`https://api.openverse.org/v1/images/?q=...&license=cc0,pdm,by,by-sa`). Noter l'auteur, la licence et la page source.
+- Aucun visage reconnaissable, aucune marque ou enseigne lisible, rien de daté (Covid, etc.). Photo regardée avant publication.
+- Fichier : `mag/photos/<slug>/<nom>.jpg`, 960 à 1200 px de large, moins de 250 Ko. Le générateur le copie à côté de la page de l'article.
+- Bloc à placer dans `corps` : `{"photo": "nom.jpg", "alt": "description précise", "legende": "une phrase", "credit": "Auteur, Banque", "source": "url de la page source", "licence": "CC BY-SA 4.0", "licence_url": "url de la licence"}`. `licence` et `licence_url` peuvent être omis pour une photo sans licence à citer (Unsplash, Pexels, CC0).
+
 ## Règles de rédaction
 
 - Français, vouvoiement, phrases courtes, ton concret. 450 à 700 mots. Guillemets français « », espaces avant : ; ? ! (le générateur pose les espaces insécables).

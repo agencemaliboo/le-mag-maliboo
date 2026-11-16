@@ -20,6 +20,12 @@ AVIS = B.AVIS + [("Ted", "Webcamo.com", "Nous avons confié le référencement d
 
 CSS_PLUS = r'''
 [hidden]{display:none!important}
+/* ---------- photos dans les articles ---------- */
+.texte figure.photo{margin:1.6em 0 0}
+.texte figure.photo img{width:100%;height:auto;border-radius:24px;background:var(--fond-2)}
+.texte figure.photo figcaption{margin-top:8px;font-size:15px;line-height:1.45;color:var(--mu)}
+.texte figure.photo .credit{font-size:13px;white-space:normal}
+.texte figure.photo .credit a{color:inherit}
 .evite{position:absolute;left:-999px;top:8px;background:#1E0F30;color:#fff;padding:8px 14px;z-index:99;border-radius:8px}
 .evite:focus{left:8px}
 .prose.legal{margin-top:34px}
@@ -331,6 +337,9 @@ def construire():
               "inLanguage": "fr", "articleSection": RUB[a["rubrique"]], "mainEntityOfPage": DOM + "/" + a["url"], "author": {"@id": DOM + "/#maliboo"}, "publisher": {"@id": DOM + "/#maliboo"}},
               {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Le Mag Maliboo", "item": DOM + "/"}, {"@type": "ListItem", "position": 2, "name": a["titre"], "item": DOM + "/" + a["url"]}]}]}
         tailles["/" + a["url"]] = page(a["url"], a.get("titre_seo", a["titre"]) + " | Le Mag Maliboo", a["description"], "".join(c), r, ld, article=True)
+        dp = os.path.join(ICI, "photos", a["slug"])                       # photos de l'article, à côté de sa page
+        for f in (sorted(os.listdir(dp)) if os.path.isdir(dp) else []):
+            shutil.copy(os.path.join(dp, f), os.path.join(OUT, a["slug"], f))
     # ---------------- tous les articles
     rubs = [k for k in RUB if any(a["rubrique"] == k for a in arts)]
     filtres = '<button type="button" data-filtre="tous" aria-pressed="true">Tous</button>' + "".join(f'<button type="button" data-filtre="{k}" aria-pressed="false">{RUB[k]}</button>' for k in rubs)
@@ -362,7 +371,7 @@ def construire():
           f'<p>Siège : Somaf Arénice, 6<sup>e</sup> étage, 455 promenade des Anglais, 06200 Nice. Téléphone : {TEL}.</p><p>Directrice de la publication : Tamara Devos.</p>'
           '<h2>Hébergement</h2><p>Le site est hébergé par GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, États-Unis.</p>'
           '<h2>Contenu</h2><p>Les articles sont préparés par l\'équipe Maliboo. Ils donnent des conseils généraux et ne remplacent pas un audit de votre situation.</p>'
-          '<h2>Propriété intellectuelle</h2><p>Les textes, les dessins et la mise en page du Mag Maliboo sont la propriété de Maliboo France. Toute reproduction sans autorisation est interdite. Les conseils peuvent être copiés et partagés en citant leur source.</p>'
+          '<h2>Propriété intellectuelle</h2><p>Les textes, les dessins et la mise en page du Mag Maliboo sont la propriété de Maliboo France. Les photos restent la propriété de leurs auteurs : elles sont publiées sous licence libre, avec le nom du photographe et la licence sous chaque image. Toute reproduction sans autorisation est interdite. Les conseils peuvent être copiés et partagés en citant leur source.</p>'
           '<h2>Avis de clients</h2><p>Les avis reproduits sur ce site ont été rédigés par des clients de Maliboo et sont repris sans retouche.</p>'
           '<h2>Marques</h2><p>Google, Google Maps, Google Ads, Gemini, ChatGPT et Perplexity sont des marques de leurs propriétaires respectifs. Maliboo est une agence indépendante.</p>')
     conf = ('<h1>Confidentialité</h1><h2>Aucun cookie, aucun formulaire</h2><p>Le Mag Maliboo ne dépose aucun cookie de mesure d\'audience ou de publicité et ne contient aucun formulaire. Nous ne recueillons aucune donnée personnelle sur ce site.</p>'

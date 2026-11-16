@@ -245,7 +245,31 @@ def corps_html(a):
             o.append(f'<h2 class="inter">{T(b["h2"])}</h2>')
         elif "liste" in b:
             o.append('<ul class="pts">' + "".join(f"<li><span>{T(x)}</span></li>" for x in b["liste"]) + "</ul>")
+        elif "photo" in b:
+            o.append(photo_html(a, b))
     return "".join(o)
+
+
+def photo_html(a, b):
+    """Bloc photo : le fichier est dans photos/<slug>/ ; il est copié à côté de la page de l'article."""
+    taille = ""
+    try:
+        from PIL import Image
+        with Image.open(os.path.join(ICI, "photos", a["slug"], b["photo"])) as im:
+            taille = f' width="{im.width}" height="{im.height}"'
+    except Exception:
+        pass
+    credit = e(b["credit"])
+    if b.get("source"):
+        credit = f'<a href="{e(b["source"])}" rel="nofollow noopener">{credit}</a>'
+    lic = b.get("licence", "")
+    if lic and b.get("licence_url"):
+        lic = f'<a href="{e(b["licence_url"])}" rel="license nofollow noopener">{e(lic)}</a>'
+    else:
+        lic = e(lic)
+    leg = f"{T(b['legende'])} " if b.get("legende") else ""
+    return (f'<figure class="photo"><img src="{e(b["photo"])}" alt="{e(b["alt"])}"{taille} loading="lazy" decoding="async">'
+            f'<figcaption>{leg}<span class="credit">Photo\u00a0: {credit}{", " + lic if lic else ""}</span></figcaption></figure>')
 
 
 def construire():

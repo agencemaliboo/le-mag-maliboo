@@ -193,6 +193,12 @@ button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:poin
 @media (prefers-reduced-motion:reduce){.couv .bulle,.art-couv .bulle,.defile .bande,.oeil{animation:none}.carte,.vignette,.bouton,.cta{transition:none}.js .carte.attend{opacity:1;transform:none}html{scroll-behavior:auto}}
 
 [hidden]{display:none!important}
+/* ---------- photos dans les articles ---------- */
+.texte figure.photo{margin:1.6em 0 0}
+.texte figure.photo img{width:100%;height:auto;border-radius:24px;background:var(--fond-2)}
+.texte figure.photo figcaption{margin-top:8px;font-size:15px;line-height:1.45;color:var(--mu)}
+.texte figure.photo .credit{font-size:13px;white-space:normal}
+.texte figure.photo .credit a{color:inherit}
 .evite{position:absolute;left:-999px;top:8px;background:#1E0F30;color:#fff;padding:8px 14px;z-index:99;border-radius:8px}
 .evite:focus{left:8px}
 .prose.legal{margin-top:34px}
