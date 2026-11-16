@@ -1,0 +1,46 @@
+{
+  "slug": "horaires-des-fetes-fiche-google",
+  "date": "2026-11-16",
+  "rubrique": "google",
+  "titre": "Horaires des fêtes : réglez votre fiche Google avant décembre",
+  "titre_seo": "Horaires exceptionnels Google : la méthode pour les fêtes",
+  "description": "Noël, jour de l'An, ouvertures du dimanche : comment indiquer vos horaires exceptionnels sur votre fiche Google, sans toucher à vos horaires habituels, et quand passer en « fermé temporairement ».",
+  "chapeau": "En décembre, vos horaires changent. Si votre fiche Google ne suit pas, un client trouve porte close, ou passe chez le voisin en vous croyant fermé. Dix minutes suffisent pour l'éviter.",
+  "corps": [
+    {"p": "Le 24 décembre, à 17 h 30, une cliente cherche « fleuriste ouvert » sur son téléphone. Votre fiche Google affiche vos horaires de tous les jours. Vous fermez exceptionnellement à 16 h. Elle fait le trajet pour rien. Elle ne reviendra peut-être pas, et elle pourrait le dire dans un avis."},
+    {"p": "L'inverse existe aussi. Vous ouvrez trois dimanches avant Noël, mais votre fiche indique « fermé » le dimanche. Ces clients-là, vous ne les verrez jamais."},
+    {"h2": "Les horaires exceptionnels, faits pour ça"},
+    {"p": "Votre fiche d'établissement Google prévoit une rubrique dédiée : les « horaires d'ouverture exceptionnels ». Google la présente comme le moyen d'ajuster vos horaires pour un jour férié, un événement ou une autre circonstance, « afin de ne pas modifier vos horaires habituels »."},
+    {"p": "C'est le point important. Ne changez pas vos horaires de la semaine pour un seul jour. Vous risquez d'oublier de les remettre en janvier. Avec les horaires exceptionnels, le jour concerné change, puis la fiche revient toute seule à la normale."},
+    {"p": "Vous pouvez indiquer des horaires réduits, des horaires élargis, ou cocher la case « Fermé » pour une date précise. Google vous suggère aussi les jours fériés à venir, et conseille de les confirmer même si vos horaires ne changent pas. Le client voit alors que l'information est à jour."},
+    {"h2": "Une semaine fermée ? Autre réglage"},
+    {"p": "Les horaires exceptionnels couvrent au maximum six jours consécutifs. Si vous fermez sept jours d'affilée ou plus, par exemple entre Noël et le jour de l'An, Google demande d'indiquer que l'établissement est « fermé temporairement »."},
+    {"p": "Pensez à rouvrir la fiche dès votre retour. Une fiche oubliée en « fermé temporairement » en janvier fait fuir les clients aussi sûrement qu'une vitrine baissée."},
+    {"h2": "Les cas qui piègent"},
+    {"liste": [
+      "Les horaires après minuit. Pour un bar ou un restaurant ouvert le soir du réveillon, Google précise que les horaires exceptionnels remplacent ceux du lendemain. Vérifiez donc aussi le 1er janvier.",
+      "Les services à part. Pour la livraison ou la vente à emporter, Google recommande les « horaires supplémentaires », pas les horaires exceptionnels.",
+      "Les autres supports. Votre site, votre répondeur et votre porte doivent dire la même chose que la fiche. Un client qui lit deux horaires différents ne sait plus lequel croire."
+    ]},
+    {"h2": "Prévenir, aussi"},
+    {"p": "Une fois les horaires saisis, publiez une actualité sur votre fiche : « Ouverts les dimanches 6, 13 et 20 décembre » ou « Fermeture du 26 décembre au 4 janvier ». Un boulanger de Quimper ou une coiffeuse de Valence n'ont pas besoin d'en faire plus. L'information est là où les clients la cherchent."},
+    {"p": "Faites-le maintenant, pas le 23 décembre. Les fêtes passent vite, et c'est souvent à ce moment-là que l'on n'a plus une minute."}
+  ],
+  "conseil": {
+    "titre": "Saisissez vos horaires de fin d'année aujourd'hui",
+    "texte": "Calendrier en main, dix minutes sur votre fiche d'établissement :",
+    "etapes": [
+      "Listez les jours de décembre et janvier où vos horaires changent : fermetures, soirées, dimanches.",
+      "Dans votre fiche, ouvrez « Modifier la fiche », puis « Horaires », puis « Horaires d'ouverture exceptionnels ».",
+      "Ajoutez chaque date, cochez « Fermé » si besoin, et confirmez les jours fériés suggérés par Google.",
+      "Fermé sept jours ou plus ? Passez la fiche en « fermé temporairement » et notez la date de réouverture dans votre agenda."
+    ]
+  },
+  "mot": {"terme": "Horaires exceptionnels", "definition": "Les horaires que vous indiquez sur votre fiche Google pour une date précise, comme un jour férié. Ils s'affichent ce jour-là à la place de vos horaires habituels, sans les effacer."},
+  "enbref": [
+    "Pour un jour différent, utilisez les horaires exceptionnels, pas vos horaires habituels.",
+    "Au-delà de six jours de fermeture, passez en « fermé temporairement ».",
+    "Faites-le dès maintenant, et alignez site, porte et répondeur."
+  ],
+  "annonce": {"titre": "Une fiche Google toujours à jour", "texte": "Maliboo reprend, optimise et anime votre fiche Google chaque mois : horaires, actualités, photos et avis.", "lien": "https://www.maliboo-referencement.fr/referencement-local-google-business-profile/", "bouton": "Voir l'offre"}
+}
