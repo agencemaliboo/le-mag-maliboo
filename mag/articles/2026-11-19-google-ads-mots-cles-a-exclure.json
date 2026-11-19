@@ -1,0 +1,50 @@
+{
+  "slug": "google-ads-mots-cles-a-exclure",
+  "date": "2026-11-19",
+  "rubrique": "pub",
+  "titre": "Google Ads : arrêtez de payer pour des clics qui ne vous concernent pas",
+  "titre_seo": "Mots clés à exclure Google Ads : le guide pour les TPE",
+  "description": "« Formation », « salaire », « gratuit » : certaines recherches déclenchent vos annonces Google Ads sans jamais vous amener de client. Les mots clés à exclure servent à les écarter. Mode d'emploi.",
+  "chapeau": "Votre annonce Google Ads s'affiche, quelqu'un clique, vous payez. Mais cette personne cherchait peut-être un emploi, une formation ou un tutoriel. Les mots clés à exclure servent à écarter ces recherches-là.",
+  "corps": [
+    {"p": "Prenons un plombier d'Angers. Il achète le mot clé « plombier Angers ». Sa campagne tourne, les clics arrivent, le budget part vite. Les appels, eux, ne suivent pas."},
+    {"p": "En regardant de près, il découvre ce que les gens ont réellement tapé : « devenir plombier Angers », « salaire plombier », « formation plomberie Angers ». Aucun de ces internautes n'a une fuite à réparer. Chacun de leurs clics a pourtant été facturé."},
+    {"h2": "Le rôle des mots clés à exclure"},
+    {"p": "Google le résume ainsi : les mots clés à exclure « vous permettent d'exclure des termes de recherche de vos campagnes ». Si vous excluez « formation », votre annonce ne s'affiche plus quand ce mot figure dans la recherche."},
+    {"p": "C'est l'un des réglages les plus simples d'un compte Google Ads. C'est aussi l'un des plus souvent oubliés, surtout quand la campagne a été créée vite, un soir, entre deux chantiers."},
+    {"h2": "Où trouver les mots à exclure"},
+    {"p": "Ne devinez pas. Votre compte contient un rapport sur les termes de recherche : la liste des recherches qui ont réellement déclenché vos annonces. Lisez-la ligne par ligne. Chaque recherche sans rapport avec ce que vous vendez vous donne un mot à exclure."},
+    {"p": "Selon les métiers, on retrouve souvent les mêmes familles :"},
+    {"liste": [
+      "L'emploi et les études : « emploi », « recrutement », « salaire », « formation », « stage », « CAP ».",
+      "Le fait-soi-même : « tuto », « vidéo », « comment faire ».",
+      "Le gratuit et l'occasion, si vous ne les proposez pas : « gratuit », « occasion », « pas cher ».",
+      "Les villes où vous n'intervenez pas, et les services que vous n'offrez pas."
+    ]},
+    {"p": "Une esthéticienne de Nancy qui ne vend pas de formation exclura « formation ». Un cabinet d'expertise comptable de Rouen exclura sans doute « cours » et « exercice corrigé »."},
+    {"h2": "Trois pièges à connaître"},
+    {"p": "Premier piège : Google indique que les mots clés à exclure ne sont pas étendus aux variantes proches. Si vous excluez « fleurs », votre annonce peut encore apparaître sur « fleur rouge ». Ajoutez vous-même le singulier, le pluriel et les synonymes. Google précise aussi que « café » et « cafe » comptent comme deux mots différents : pensez aux accents."},
+    {"p": "Deuxième piège : le type de correspondance. Par défaut, un mot clé exclu bloque toute recherche qui contient tous ses mots, dans n'importe quel ordre. Entre guillemets, il ne bloque que les recherches où ses mots apparaissent dans le même ordre. Entre crochets, il ne bloque que la recherche exacte. Pour un mot seul comme « salaire », le réglage par défaut suffit."},
+    {"p": "Troisième piège : en faire trop. Google prévient lui-même que trop d'exclusions peuvent faire toucher moins de monde à vos annonces. N'excluez pas « urgence » si vous dépannez le dimanche. Chaque mot exclu doit correspondre à une demande que vous ne traitez vraiment pas."},
+    {"h2": "Une habitude, pas un réglage unique"},
+    {"p": "Les recherches évoluent. De nouvelles formulations apparaissent chaque semaine. Un coup d'œil régulier au rapport sur les termes de recherche vaut mieux qu'une grande liste faite une seule fois puis oubliée."},
+    {"p": "Vous pouvez aussi créer une liste de mots clés à exclure et l'appliquer à plusieurs campagnes. Pratique si vous en avez une par ville ou par service : vous la mettez à jour une fois, toutes les campagnes en profitent."}
+  ],
+  "conseil": {
+    "titre": "Faites le ménage dans vos recherches aujourd'hui",
+    "texte": "Vingt minutes dans votre compte Google Ads :",
+    "etapes": [
+      "Ouvrez le rapport sur les termes de recherche et affichez les trente derniers jours.",
+      "Surlignez chaque recherche sans rapport avec ce que vous vendez : emploi, formation, gratuit, autre ville, autre service.",
+      "Ajoutez les mots en cause comme mots clés à exclure, avec leur singulier, leur pluriel et leurs variantes d'accent.",
+      "Notez un rappel dans votre agenda pour recommencer dans quinze jours."
+    ]
+  },
+  "mot": {"terme": "Mot clé à exclure", "definition": "Un mot ou une expression que vous indiquez à Google Ads pour que vos annonces ne s'affichent pas sur les recherches qui le contiennent. On parle aussi de « mot clé négatif »."},
+  "enbref": [
+    "Le rapport sur les termes de recherche montre ce que les gens ont vraiment tapé avant de cliquer.",
+    "Excluez les recherches sans rapport avec votre offre : emploi, formation, gratuit, autre ville.",
+    "Ajoutez pluriels, synonymes et accents vous-même, et n'excluez pas trop."
+  ],
+  "annonce": {"titre": "Une campagne Google Ads suivie de près", "texte": "Maliboo crée et pilote vos campagnes Google Ads : choix des mots clés, exclusions, annonces et suivi régulier des recherches.", "lien": "https://www.maliboo-referencement.fr/referencement-payant-google-ads/", "bouton": "Voir l'offre"}
+}
